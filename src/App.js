@@ -65,6 +65,7 @@ class App extends Component {
         return (
             <div>
                 <Header>
+                    <h1>To Do List</h1>
                     <AddTaskForm
                         task={task}
                         onInputChange={this.handleInputChange}

@@ -1,10 +1,10 @@
 import { Component } from 'react';
-
+import './AddTaskForm.css';
 class AddTaskForm extends Component {
     render() {
         const { task, onInputChange, onTaskSubmit } = this.props;
         return (
-            <form onSubmit={onTaskSubmit}>
+            <form className="addTaskForm" onSubmit={onTaskSubmit}>
                 <input
                     type="text"
                     id="taskInput"
@@ -12,7 +12,9 @@ class AddTaskForm extends Component {
                     value={task.text}
                     onChange={onInputChange}
                 />
-                <button type="submit">Add Task</button>
+                <button type="submit" className="addTaskBtn">
+                    Add Task
+                </button>
             </form>
         );
     }

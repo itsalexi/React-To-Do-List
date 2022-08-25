@@ -1,0 +1,20 @@
+.addTaskForm {
+    display: flex;
+    gap: 1em;
+}
+
+.addTaskBtn {
+    border-radius: 1em;
+    padding: 0 1.5em;
+}
+
+.addTaskBtn:hover {
+    transform: scale(1.05);
+    transition: all 0.1s;
+}
+
+#taskInput {
+    padding: 0.5em;
+    border-radius: 1em;
+    width: 30em;
+}
