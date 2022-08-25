@@ -52,23 +52,29 @@ class Task extends Component {
         if (!this.state.edit) {
             return (
                 <div className="task">
-                    <p>
+                    <div className="task-content">
                         {index + 1}. {text}
-                    </p>
-                    <button onClick={this.removeTask}>X</button>
-                    <button onClick={this.switchMode}>Edit</button>
+                    </div>
+                    <div className="button-container">
+                        <button onClick={this.removeTask}>X</button>
+                        <button onClick={this.switchMode}>Edit</button>
+                    </div>
                 </div>
             );
         } else {
             return (
                 <div className="task">
-                    <input
-                        type="text"
-                        id="newText"
-                        value={this.state.newText}
-                        onChange={this.setNewText}
-                    />
-                    <button onClick={this.editTask}>Edit</button>
+                    <div className="task-content">
+                        <input
+                            type="text"
+                            id="newText"
+                            value={this.state.newText}
+                            onChange={this.setNewText}
+                        />
+                    </div>
+                    <div className="button-container">
+                        <button onClick={this.editTask}>Submit</button>
+                    </div>
                 </div>
             );
         }

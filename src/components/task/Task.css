@@ -1,3 +1,41 @@
 .task {
-    border: 1px solid black;
+    height: 5em;
+    width: 100%;
+    padding: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1em;
+}
+
+.task:hover {
+    transform: scale(1.03);
+    transition: all 0.2s;
+}
+
+.button-container button:hover {
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+.task-content {
+    flex: 6;
+}
+.button-container {
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    border: none;
+    background: none;
+}
+
+#newText {
+    width: 95%;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
 }
