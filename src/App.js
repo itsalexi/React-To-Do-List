@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Overview from './components/Overview';
+import Overview from './components/overview/Overview';
+import Header from './components/header/Header';
+import AddTaskForm from './components/addtaskform/AddTaskForm';
 import uniqid from 'uniqid';
 class App extends Component {
     constructor() {
@@ -62,17 +64,14 @@ class App extends Component {
 
         return (
             <div>
-                <form onSubmit={this.onTaskSubmit}>
-                    <label htmlFor="taskInput">Enter Task</label>
-                    <input
-                        type="text"
-                        id="taskInput"
-                        placeholder="Task Name"
-                        value={task.text}
-                        onChange={this.handleInputChange}
+                <Header>
+                    <AddTaskForm
+                        task={task}
+                        onInputChange={this.handleInputChange}
+                        onTaskSubmit={this.onTaskSubmit}
                     />
-                    <button type="submit">Add Task</button>
-                </form>
+                </Header>
+
                 <Overview
                     tasks={tasks}
                     removeTask={this.removeTask}

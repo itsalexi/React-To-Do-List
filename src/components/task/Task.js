@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import './Task.css';
 class Task extends Component {
     constructor(props) {
         super(props);
@@ -51,7 +51,7 @@ class Task extends Component {
 
         if (!this.state.edit) {
             return (
-                <div>
+                <div className="task">
                     <p>
                         {index + 1}. {text}
                     </p>
@@ -61,7 +61,7 @@ class Task extends Component {
             );
         } else {
             return (
-                <div>
+                <div className="task">
                     <input
                         type="text"
                         id="newText"

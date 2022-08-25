@@ -1,10 +1,12 @@
 import { Component } from 'react';
-import Task from './Task';
+import Task from '../task/Task';
+import './Overview.css';
+
 class Overview extends Component {
     render() {
         const { tasks } = this.props;
         return (
-            <ul>
+            <div className="task-list">
                 {tasks.map((task, index) => {
                     return (
                         <Task
@@ -17,7 +19,7 @@ class Overview extends Component {
                         />
                     );
                 })}
-            </ul>
+            </div>
         );
     }
 }
